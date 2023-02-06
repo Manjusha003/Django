@@ -4,7 +4,6 @@ from rest_framework_mongoengine import generics
 from django.http import HttpResponse,JsonResponse
 
 
-
 # createing  the users
 class CreateUser(generics.CreateAPIView):
     queryset = User.objects.all()
@@ -20,4 +19,8 @@ class UserList(generics.ListAPIView):
     def get_queryset(self):
         queryset = self.queryset    
         return queryset
+
+
+
+
 
